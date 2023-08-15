@@ -17,11 +17,29 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100dvh;
+}
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (min-width: 600px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 896px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    max-width: 1152px;
+  }
 }
