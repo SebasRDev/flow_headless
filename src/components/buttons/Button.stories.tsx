@@ -9,6 +9,20 @@ const meta: Meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: "primary" },
+      }
+    },
+    size: {
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: "small" },
+      }
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
