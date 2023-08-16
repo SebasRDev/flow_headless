@@ -1,5 +1,5 @@
 import { Crownbar } from "@/components/crownbar/Crownbar";
-import { Header } from '../components'
+import { Header, Title } from '../components'
 import { HeroSlider } from "@/components/hero-slider/HeroSlider";
 
 const businessMenu = [
@@ -15,6 +15,10 @@ export default function Home() {
       <Crownbar businessMenu={businessMenu}/>
       <Header />
       <HeroSlider />
+      <Title
+        title="Why should you choose FLOW Enterprise?"
+        subtitle="Three simple reasons:"
+      />
     </>
   )
 }
