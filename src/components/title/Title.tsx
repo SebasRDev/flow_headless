@@ -1,6 +1,6 @@
 import React from "react";
 import { clsx } from 'clsx';
-import { containerTitle, titleStyles, subtitleStyles } from "./Title.variants";
+import * as styles from "./Title.variants";
 import { TitleProps } from "./Title.interface";
 
 export const Title: React.FC<TitleProps> = ({
@@ -14,13 +14,13 @@ export const Title: React.FC<TitleProps> = ({
   ...props
 }) => {
   return (
-    <div className={clsx(classes, containerTitle({ align, color }))} {...props}>
+    <div className={clsx(classes, styles.containerTitle({ align, color }))} {...props}>
       {tag == "h1" ?
-        <h1 className={titleStyles({tag})}>{title}</h1>
+        <h1 className={styles.titleStyles({tag})}>{title}</h1>
         :
-        <h3 className={titleStyles()}>{title}</h3>
+        <h3 className={styles.titleStyles()}>{title}</h3>
       }
-      <p className={subtitleStyles({ align, size })}>{subtitle}</p>
+      {subtitle && <p className={styles.subtitleStyles({ align, size })}>{subtitle}</p>}
     </div>
   );
 };
