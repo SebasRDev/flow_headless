@@ -24,7 +24,7 @@ export interface TitleProps {
    */
   size?: 'medium' | 'big';
   /**
-   * Optional additional button classes
+   * Optional additional classes
    */
   classes?: {}[] | string;
 };
