@@ -10,7 +10,7 @@ export interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  label?: string;
   /**
    * Optional additional button classes
    */

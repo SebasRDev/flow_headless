@@ -10,11 +10,11 @@ export interface FeatureCtaProps {
   /**
    * Object with link to redirect
    */
-  link: { text: string, url: string, alt?:string};
+  link: { text: string, url: string};
   /**
    * Object with the image URLs for desktop and mobile
    */
-  images: { desktop: string, mobile: string};
+  images: { desktop: string, mobile: string, alt?:string};
   /**
    * Which border color should be?
    */

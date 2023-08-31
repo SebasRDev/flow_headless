@@ -1,5 +1,5 @@
 import { Crownbar } from "@/components/crownbar/Crownbar";
-import { Header, Title, FeatureCta } from '../components'
+import { Header, Title, FeatureCta, HalfImageText } from '../components'
 import { HeroSlider } from "@/components/hero-slider/HeroSlider";
 import ImageCtaTest from "../assets/featureCta.jpeg";
 
@@ -21,6 +21,35 @@ const featureCtaMock = {
     mobile: ImageCtaTest.src,
   }
 };
+const halfImageMock = {
+  title: "1. Fully-managed, end-to-end network solutions",
+  description: "Because your I.T. solutions partner should offer best-of-breed hardware and software running on a secure, state-of-the-art fibre optics network backed by extensive technical expertise, all designed to help you reach your business goals. (Which we absolutely do.)",
+  image: {
+    url: "/images/halfImage1.jpeg",
+    alt: "1. Fully-managed, end-to-end network solutions",
+  },
+  link: {
+    text: "Explore our portfolio",
+    url: "https://www.google.com",
+  }
+};
+const halfImage2Mock = {
+  ...halfImageMock,
+  title: "2. A world-class support team",
+  image: {
+    url: "/images/halfImage2.jpeg",
+    alt: "1. Fully-managed, end-to-end network solutions",
+  },
+  alignmentImage: "right"
+};
+const halfImage3Mock = {
+  ...halfImageMock,
+  title: "3. The region's biggest and best network",
+  image: {
+    url: "/images/halfImage3.jpeg",
+    alt: "1. Fully-managed, end-to-end network solutions",
+  }
+};
 
 export default function Home() {
   return (
@@ -28,11 +57,14 @@ export default function Home() {
       <Crownbar businessMenu={businessMenu}/>
       <Header />
       <HeroSlider />
+      <FeatureCta {...featureCtaMock} />
       <Title
         title="Why should you choose FLOW Enterprise?"
         subtitle="Three simple reasons:"
       />
-      <FeatureCta {...featureCtaMock} />
+      <HalfImageText {...halfImageMock} />
+      <HalfImageText {...halfImage2Mock} />
+      <HalfImageText {...halfImage3Mock} />
     </>
   )
 }
